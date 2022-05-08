@@ -12,4 +12,9 @@ export class FilterpageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  data: any;
+
+  getCars(){
+    this.data = this._service.getCarData().subscribe();
+  }
 }

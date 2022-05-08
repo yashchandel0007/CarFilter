@@ -7,7 +7,7 @@ import { FilterpageComponent } from './filterpage/filterpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { ServiceService } from './service.service'
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +17,8 @@ import { ServiceService } from './service.service'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

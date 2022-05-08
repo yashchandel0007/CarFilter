@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ServiceService } from '../service.service';
 @Component({
   selector: 'app-filterpage',
   templateUrl: './filterpage.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _service: ServiceService) { }
 
   ngOnInit(): void {
   }

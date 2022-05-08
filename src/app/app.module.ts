@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FilterpageComponent } from './filterpage/filterpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { ServiceService } from './service.service'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { MaterialModule } from './material/material.module';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

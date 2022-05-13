@@ -1,0 +1,11 @@
+.card-class{
+    max-width: fit-content;
+    background-color: aquamarine;
+}
+.carImageClass{
+    max-width: 300px;
+}
+.list-item{
+    /* background-color: blueviolet; */
+    height: 25px !important;
+}

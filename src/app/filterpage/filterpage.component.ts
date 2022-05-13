@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
+
 @Component({
   selector: 'app-filterpage',
   templateUrl: './filterpage.component.html',
@@ -8,9 +9,11 @@ import { ServiceService } from '../service.service';
 export class FilterpageComponent implements OnInit {
 
   constructor(private _service: ServiceService) { }
+  public carImage:string = 'assets/Images/carImage.jpg';
 
   ngOnInit(): void {
     this.getCars();
+
   }
 
   data: any;
@@ -20,10 +23,10 @@ export class FilterpageComponent implements OnInit {
       this.data = response;
       this.data = this.data.cars;
     });
-   
   }
+  
   filterCars(){
-    
+
   }
 
 }

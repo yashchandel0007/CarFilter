@@ -6,5 +6,27 @@
 
 
 <div>
-    {{data}}
+    <mat-grid-list cols="4" rowHeight="450px">
+        <mat-grid-tile *ngFor="let car of data">
+            <mat-card [ngClass]="'card-class'">
+                <mat-card-header>
+                    <mat-card-title>
+                        {{car.car}}
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                        {{car.car_model}}
+                    </mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-img [src]="carImage" [ngClass]="'carImageClass'" alt="image not found">
+                <mat-card-content>
+                        <mat-list>
+                            <mat-list-item [ngClass]="'list-item'">{{car.car_model_year}}</mat-list-item>
+                            <mat-list-item [ngClass]="'list-item'">{{car.car_color}}</mat-list-item>
+                            <mat-list-item [ngClass]="'list-item'">{{car.price}}</mat-list-item>
+                            <mat-list-item [ngClass]="'list-item'">{{car.car_vin}}</mat-list-item>
+                        </mat-list>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
 </div>

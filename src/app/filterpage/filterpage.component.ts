@@ -10,11 +10,20 @@ export class FilterpageComponent implements OnInit {
   constructor(private _service: ServiceService) { }
 
   ngOnInit(): void {
+    this.getCars();
   }
 
   data: any;
 
   getCars(){
-    this.data = this._service.getCarData().subscribe();
+    this._service.getCarData().subscribe((response)=>{
+      this.data = response;
+      this.data = this.data.cars;
+    });
+   
   }
+  filterCars(){
+    
+  }
+
 }

@@ -1,6 +1,34 @@
 <mat-toolbar>
-    <span>First Option</span> 
-    <span>Second Option</span>
+    <span>
+        <mat-form-field appearance="fill">
+            <mat-label>Manufacturer</mat-label>
+            <mat-select [(ngModel)]="selectedManufacturer" name="company">
+                <mat-option *ngFor="let carOption of manufacturerFilter" [value]="carOption">
+                     {{carOption}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </span> 
+    <span>
+        <mat-form-field appearance="fill">
+            <mat-label>Year</mat-label>
+            <mat-select [(ngModel)]="selectedYear" name="year">
+                <mat-option *ngFor="let yearOption of yearFilter" [value]="yearOption">
+                     {{yearOption}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </span>
+    <span>
+        <mat-form-field appearance="fill">
+            <mat-label>Colour</mat-label>
+            <mat-select [(ngModel)]="selectedColour" name="colour">
+                <mat-option *ngFor="let colourOption of colourFilter" [value]="colourOption">
+                     {{colourOption}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </span>
     <span><button mat-raised-button (click)="filterCars()">Filter</button></span>
 </mat-toolbar>
 
